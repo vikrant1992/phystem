@@ -1,8 +1,10 @@
 version: 0.0
 os: linux
 files:
-  - source: target/shipwreck-app-1.0-SNAPSHOT.jar
-    destination: /home/ubuntu
+  - source: shipwreck-app-1.0-SNAPSHOT.jar
+    destination: /home/ubuntu/dist
 hooks:
   BeforeInstall:
+    - location: scripts/deletefile.sh
+  AfterInstall:
     - location: scripts/start_server.sh
