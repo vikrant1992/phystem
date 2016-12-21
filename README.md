@@ -29,6 +29,7 @@ Configure Maven
 Configure Java
 
 sudo update-alternatives --config javac
+
 /usr/lib/jvm/java-8-openjdk-amd64
 
 To Install Sonar
@@ -37,10 +38,13 @@ To Install Sonar
 http://sonar-pkg.sourceforge.net/
 
 Add the following entry in your /etc/apt/sources.list :
+
 deb http://downloads.sourceforge.net/project/sonar-pkg/deb binary/
 
 Update your local package index and install Sonar:
+
 sudo apt-get update
+
 sudo apt-get install sonar
 
 
@@ -54,21 +58,27 @@ sudo apt-get install mysql-server
 mysql -u root -p
 
 CREATE DATABASE sonar CHARACTER SET utf8 COLLATE utf8_general_ci;
+
 CREATE USER 'sonar' IDENTIFIED BY 'sonar';
+
 GRANT ALL ON sonar.* TO 'sonar'@'%' IDENTIFIED BY 'sonar';
+
 GRANT ALL ON sonar.* TO 'sonar'@'localhost' IDENTIFIED BY 'sonar';
+
 FLUSH PRIVILEGES;
 
 
 Open /opt/sonar/conf/sonar.properties
 
 sonar.jdbc.username=sonar
+
 sonar.jdbc.password=sonar
 
 sonar.jdbc.url=jdbc:mysql://localhost:3306/sonar?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useConfigs=maxPerformance
 
 
 To start sonar
+
 sudo /etc/init.d/sonar start
 
 # How to Deploy SpringBoot on EBS
