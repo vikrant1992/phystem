@@ -1,8 +1,10 @@
-# War File BuildName
+# ShipWreck App ![Travis](https://api.travis-ci.org/phystem/ShipWreck-App.svg)
+
+## War File BuildName
 
 target/shipwreck-app-1.0-SNAPSHOT.war
 
-# Configure Ec2 Jenkins Ubuntu
+## Configure Ec2 Jenkins Ubuntu
 
 To Install Java
 ----------------
@@ -85,6 +87,6 @@ To start sonar
 
 sudo /etc/init.d/sonar start
 
-# How to Deploy SpringBoot on EBS
+## How to Deploy SpringBoot on EBS
 
 https://aws.amazon.com/blogs/devops/deploying-a-spring-boot-application-on-aws-using-aws-elastic-beanstalk/
